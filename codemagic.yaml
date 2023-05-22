@@ -10,7 +10,7 @@ workflows:
         - google_play_credentials
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
-        DOTNET: $CM_BUILD_DIR/dotnet/dotnet
+        DOTNET_BIN: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.maui.weather"
     scripts:
       - name: Install dotnet sdk
