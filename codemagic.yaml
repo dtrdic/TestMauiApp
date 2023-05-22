@@ -12,16 +12,13 @@ workflows:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.maui.weather"
-      java: 11
-      xcode: 14.3
-      flutter: 3.7.12
     scripts:
       - name: Install dotnet sdk
         script: | 
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --install-dir $DOTNET_PATH
-          dotnet dev-certs https --trust
+
       - name: Install MAUI
         script: | 
           $DOTNET nuget locals all --clear 
