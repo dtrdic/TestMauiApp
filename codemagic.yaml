@@ -18,6 +18,7 @@ workflows:
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --install-dir $DOTNET_PATH
+          dotnet dev-certs https --trust
       - name: Install MAUI
         script: | 
           $DOTNET nuget locals all --clear 
